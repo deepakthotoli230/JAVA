@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java-Loop</title>
+</head>
+<body>
+   <script>
+
+// // 1.
+// function printMultiplicationTable(num) {
+//   let result = [];
+//   for (let i = 1; i <= 10; i++) {
+//     result.push(`${num} x ${i} = ${num * i}`);
+//   }
+//   return result;
+// }
+
+// // 2.
+// function getEvenNumbers() {
+//   let evens = [];
+//   for (let i = 2; i <= 100; i += 2) {
+//     evens.push(i);
+//   }
+//   return evens;
+// }
+
+// // 3.
+// function sumToN(n) {
+//   let sum = 0;
+//   for (let i = 1; i <= n; i++) {
+//     sum += i;
+//   }
+//   return sum;
+// }
+
+// // 4.
+// function factorial(n) {
+//   let fact = 1;
+//   for (let i = 1; i <= n; i++) {
+//     fact *= i;
+//   }
+//   return fact;
+// }
+
+// // 5.
+// function countDivisibleBy3(n) {
+//   let count = 0;
+//   for (let i = 1; i <= n; i++) {
+//     if (i % 3 === 0) count++;
+//   }
+//   return count;
+// }
+
+// // 6.
+// function fibonacciSeries(n) {
+//   if (n <= 0) return [];
+//   if (n === 1) return [0];
+//   let series = [0, 1];
+//   for (let i = 2; i < n; i++) {
+//     series.push(series[i - 1] + series[i - 2]);
+//   }
+//   return series;
+// }
+
+// // 7.
+// function reverseDigitsFor(num) {
+//   let str = num.toString();
+//   let reversed = "";
+//   for (let i = str.length - 1; i >= 0; i--) {
+//     reversed += str[i];
+//   }
+//   return parseInt(reversed);
+// }
+
+// // 8.
+// function isPrime(num) {
+//   if (num <= 1) return false;
+//   for (let i = 2; i <= Math.sqrt(num); i++) {
+//     if (num % i === 0) return false;
+//   }
+//   return true;
+// }
+
+// // 9.
+// function getPrimesTo100() {
+//   let primes = [];
+//   for (let i = 2; i <= 100; i++) {
+//     if (isPrime(i)) primes.push(i);
+//   }
+//   return primes;
+// }
+
+// // 10.
+// function sumOfDigits(num) {
+//   let str = Math.abs(num).toString();
+//   let sum = 0;
+//   for (let i = 0; i < str.length; i++) {
+//     sum += parseInt(str[i]);
+//   }
+//   return sum;
+// }
+
+// // 11.
+// function printRightAngledTriangle(rows) {
+//   let pattern = "";
+//   for (let i = 1; i <= rows; i++) {
+//     pattern += "*".repeat(i) + "\n";
+//   }
+//   return pattern;
+// }
+
+// // 12.
+// function printPyramid(rows) {
+//   let pattern = "";
+//   for (let i = 1; i <= rows; i++) {
+//     let spaces = " ".repeat(rows - i);
+//     let stars = "*".repeat(2 * i - 1);
+//     pattern += spaces + stars + "\n";
+//   }
+//   return pattern;
+// }
+
+// // 13.
+// function largestDigit(num) {
+//   let str = Math.abs(num).toString();
+//   let max = 0;
+//   for (let i = 0; i < str.length; i++) {
+//     let digit = parseInt(str[i]);
+//     if (digit > max) max = digit;
+//   }
+//   return max;
+// }
+
+// // 14.
+// function getArmstrongNumbers() {
+//   let armstrongs = [];
+//   for (let i = 1; i <= 1000; i++) {
+//     let str = i.toString();
+//     let numDigits = str.length;
+//     let sum = 0;
+//     for (let j = 0; j < numDigits; j++) {
+//       sum += Math.pow(parseInt(str[j]), numDigits);
+//     }
+//     if (sum === i) armstrongs.push(i);
+//   }
+//   return armstrongs;
+// }
+
+// // 15.
+// function firstNPerfectSquares(n) {
+//   let squares = [];
+//   for (let i = 1; i <= n; i++) {
+//     squares.push(i * i);
+//   }
+//   return squares;
+// }
+
+
+
+// // 16.
+// function sumUntilZero(inputs) {
+//   let sum = 0;
+//   let idx = 0;
+//   while (idx < inputs.length) {
+//     let num = inputs[idx++];
+//     if (num === 0) break;
+//     sum += num;
+//   }
+//   return sum;
+// }
+
+// // 17.
+// function reverseNumberWhile(num) {
+//   let temp = Math.abs(num);
+//   let reversed = 0;
+//   while (temp > 0) {
+//     let digit = temp % 10;
+//     reversed = reversed * 10 + digit;
+//     temp = Math.floor(temp / 10);
+//   }
+//   return num < 0 ? -reversed : reversed;
+// }
+
+// // 18.
+// function isPalindrome(num) {
+//   return num === reverseNumberWhile(num);
+// }
+
+// // 19.
+// function countDigits(num) {
+//   let temp = Math.abs(num);
+//   if (temp === 0) return 1;
+//   let count = 0;
+//   while (temp > 0) {
+//     count++;
+//     temp = Math.floor(temp / 10);
+//   }
+//   return count;
+// }
+
+// // 20.
+// function productOfDigits(num) {
+//   let temp = Math.abs(num);
+//   if (temp === 0) return 0;
+//   let product = 1;
+//   while (temp > 0) {
+//     product *= temp % 10;
+//     temp = Math.floor(temp / 10);
+//   }
+//   return product;
+// }
+
+// // 21.
+// function digitalRoot(num) {
+//   let temp = Math.abs(num);
+//   while (temp >= 10) {
+//     let sum = 0;
+//     while (temp > 0) {
+//       sum += temp % 10;
+//       temp = Math.floor(temp / 10);
+//     }
+//     temp = sum;
+//   }
+//   return temp;
+// }
+
+// // 22.
+// function getOddsBetween(start, end) {
+//   let odds = [];
+//   let current = Math.min(start, end) + 1;
+//   let limit = Math.max(start, end);
+//   while (current < limit) {
+//     if (current % 2 !== 0) odds.push(current);
+//     current++;
+//   }
+//   return odds;
+// }
+
+// // 23.
+// function findGCD(a, b) {
+//   a = Math.abs(a);
+//   b = Math.abs(b);
+//   while (b !== 0) {
+//     let temp = b;
+//     b = a % b;
+//     a = temp;
+//   }
+//   return a;
+// }
+
+// // 24.
+// function toBinary(num) {
+//   if (num === 0) return "0";
+//   let temp = num;
+//   let binary = "";
+//   while (temp > 0) {
+//     binary = (temp % 2) + binary;
+//     temp = Math.floor(temp / 2);
+//   }
+//   return binary;
+// }
+
+// // 25.
+// function smallestDigit(num) {
+//   let temp = Math.abs(num);
+//   if (temp === 0) return 0;
+//   let min = 9;
+//   while (temp > 0) {
+//     let digit = temp % 10;
+//     if (digit < min) min = digit;
+//     temp = Math.floor(temp / 10);
+//   }
+//   return min;
+// }
+
+// // 26.
+// function powersOfTwo(limit) {
+//   let powers = [];
+//   let val = 1;
+//   while (val <= limit) {
+//     powers.push(val);
+//     val *= 2;
+//   }
+//   return powers;
+// }
+
+// // 27.
+// function calculateAverageMarks(marksList) {
+//   let total = 0;
+//   let count = 0;
+//   let idx = 0;
+//   while (idx < marksList.length) {
+//     let mark = marksList[idx++];
+//     if (mark === -1) break;
+//     total += mark;
+//     count++;
+//   }
+//   return count === 0 ? 0 : total / count;
+// }
+
+// // 28.
+// function countValueTypes(inputs, stopValue) {
+//   let pos = 0, neg = 0, zero = 0;
+//   let idx = 0;
+//   while (idx < inputs.length) {
+//     let val = inputs[idx++];
+//     if (val === stopValue) break;
+//     if (val > 0) pos++;
+//     else if (val < 0) neg++;
+//     else zero++;
+//   }
+//   return { positive: pos, negative: neg, zero: zero };
+// }
+
+// // 29.
+// function multiplicationTableWhile(num) {
+//   let result = [];
+//   let i = 1;
+//   while (i <= 10) {
+//     result.push(`${num} x ${i} = ${num * i}`);
+//     i++;
+//   }
+//   return result;
+// }
+
+// // 30.
+// function countdownTimer(n) {
+//   let timer = [];
+//   while (n >= 1) {
+//     timer.push(n);
+//     n--;
+//   }
+//   return timer;
+// }
+
+
+// // 31.
+// function menuSimulation(choices) {
+//   let logs = [];
+//   let idx = 0;
+//   let choice;
+//   do {
+//     choice = choices[idx++];
+//     logs.push(`Option selected: ${choice}`);
+//   } while (choice !== "Exit" && idx <= choices.length);
+//   return logs;
+// }
+
+// // 32.
+// function numberGuessingGame(target, guesses) {
+//   let idx = 0;
+//   let guess;
+//   do {
+//     guess = guesses[idx++];
+//     if (guess === target) return `Correct! Guessed ${target} in ${idx} tries.`;
+//   } while (idx < guesses.length);
+//   return "Target not reached.";
+// }
+
+// // 33.
+// function validatePassword(correctPass, attempts) {
+//   let idx = 0;
+//   let attempt;
+//   do {
+//     attempt = attempts[idx++];
+//     if (attempt === correctPass) return "Access Granted";
+//   } while (idx < attempts.length);
+//   return "Access Denied";
+// }
+
+// // 34.
+// function calculateStudentAverageDoWhile(inputs) {
+//   let total = 0;
+//   let count = 0;
+//   let idx = 0;
+//   do {
+//     let item = inputs[idx++];
+//     if (!item || item.stop) break;
+//     total += item.mark;
+//     count++;
+//   } while (idx < inputs.length);
+//   return count === 0 ? 0 : total / count;
+// }
+
+// // 35.
+// function calculateShoppingTotal(prices) {
+//   let total = 0;
+//   let idx = 0;
+//   do {
+//     let price = prices[idx++];
+//     if (price <= 0 || price === undefined) break;
+//     total += price;
+//   } while (idx < prices.length);
+//   return total;
+// }
+
+// // 36.
+// function atmMenuSimulation(actions) {
+//   let balance = 1000;
+//   let logs = [];
+//   let idx = 0;
+//   let action;
+//   do {
+//     action = actions[idx++];
+//     if (!action) break;
+//     if (action.type === "Deposit") balance += action.amount;
+//     else if (action.type === "Withdraw") balance -= action.amount;
+//     logs.push(`${action.type}: Balance is ${balance}`);
+//   } while (action.type !== "Exit" && idx < actions.length);
+//   return logs;
+// }
+
+// // 37.
+// function validateInputRange(inputs) {
+//   let idx = 0;
+//   let num;
+//   do {
+//     num = inputs[idx++];
+//   } while ((num < 1 || num > 100) && idx < inputs.length);
+//   return (num >= 1 && num <= 100) ? `Valid input: ${num}` : "No valid input found";
+// }
+
+// // 38.
+// function rollDiceUntilSix() {
+//   let rolls = [];
+//   let roll;
+//   do {
+//     roll = Math.floor(Math.random() * 6) + 1;
+//     rolls.push(roll);
+//   } while (roll !== 6);
+//   return rolls;
+// }
+
+// // 39.
+// function firstNMultiplesDoWhile(num, n) {
+//   let multiples = [];
+//   let i = 1;
+//   if (n <= 0) return multiples;
+//   do {
+//     multiples.push(num * i);
+//     i++;
+//   } while (i <= n);
+//   return multiples;
+// }
+
+// // 40.
+// function simpleCalculatorSimulation(operations) {
+//   let results = [];
+//   let idx = 0;
+//   let op;
+//   do {
+//     op = operations[idx++];
+//     if (!op || op.type === "Quit") break;
+//     let res;
+//     switch (op.type) {
+//       case "Add": res = op.a + op.b; break;
+//       case "Subtract": res = op.a - op.b; break;
+//       case "Multiply": res = op.a * op.b; break;
+//       case "Divide": res = op.b !== 0 ? op.a / op.b : "Error"; break;
+//     }
+//     results.push(res);
+//   } while (idx < operations.length);
+//   return results;
+// }
+</script> 
+</body>
+</html>

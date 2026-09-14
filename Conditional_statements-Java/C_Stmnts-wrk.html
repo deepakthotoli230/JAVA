@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditional Statements-Java</title>
+</head>
+<body>
+    <script>
+        // 1. let mark = prompt("Enter the mark");
+        // if (mark>=85 && mark<=100){
+        //     console.log("A grade")
+        // } else if(mark>=70){
+        //     console.log("B grade")
+        // } else if(mark>=60){
+        //     console.log("C grade")
+        // }else if(mark>=40){
+        //     console.log("D grade")
+        // }else{
+        //     console.log("Fail")
+        // }
+
+        // 2. let year = Number(prompt("Enter the year"));
+        // if (year % 4 == 0){
+        //     console.log(year ,"is Leap year")
+        // } else {
+        //     console.log(year, "is not a Leap Year")
+        // }
+
+        // 3.  let n1 = prompt("Enter a number");
+        // let n2 =  prompt("Enter a number");
+        // let n3 = prompt("Enter a number");
+
+        // if (n1>n2){
+        //     if(n1>n3){
+        //         console.log(n1,"is larger")
+        //     }
+        //     else if(n2>n3){
+        //         console.log(n2, "is larger")
+        //     }
+        // }else{
+        //     console.log(n3, "is larger")
+        // }
+
+        // 4. Electricity bill
+
+            // let units = Number(prompt("Enter units"));
+            //  let bill;
+
+            // if (units <= 100) {
+            //  bill = units * 5;
+            // } else if (units <= 200) {
+            //   bill = (100 * 5) + ((units - 100) * 7);
+            // } else {
+            // bill = (100 * 5) + (100 * 7) + ((units - 200) * 10);
+            // }
+            // console.log("Electricity bill =", bill);
+
+// 5. Income tax
+
+// let salary = Number(prompt(" Enter salary"));
+// let tax;
+
+// if (salary <= 250000) {
+//     tax = 0;
+// } else if (salary <= 500000) {
+//     tax = salary * 0.05;
+// } else if (salary <= 1000000) {
+//     tax = salary * 0.20;
+// } else {
+//     tax = salary * 0.30;
+// }
+
+// console.log("Tax =", tax);
+
+
+// // 6. Passport eligibility
+
+// let age = Number(prompt(" Enter age"));
+// let citizen = prompt("Are you a citizen? yes/no");
+
+// if (age >= 18 && citizen == "yes") {
+//     console.log("Eligible for passport");
+// } else {
+//     console.log("Not eligible for passport");
+// }
+
+
+// // 7. Admin panel access
+
+// let role = prompt(" Enter your role");
+// let status = prompt("Enter account status");
+
+// if (role == "admin" && status == "active") {
+//     console.log("Access granted");
+// } else {
+//     console.log("Access denied");
+// }
+
+
+// // 8. Character type
+
+// let ch = prompt(" Enter a character");
+
+// if ("aeiouAEIOU".includes(ch)) {
+//     console.log("Vowel");
+// } else if ((ch >= "a" && ch <= "z") ||
+//            (ch >= "A" && ch <= "Z")) {
+//     console.log("Consonant");
+// } else if (ch >= "0" && ch <= "9") {
+//     console.log("Digit");
+// } else {
+//     console.log("Special character");
+// }
+
+
+// // 9. Password validation
+
+// let password = prompt("Enter password");
+
+// if (password.length >= 8 &&
+//     /\d/.test(password) &&
+//     password.includes("@")) {
+//     console.log("Valid password");
+// } else {
+//     console.log("Invalid password");
+// }
+
+
+// // 10. Shipping charges
+
+// let amount = Number(prompt(" Enter order amount"));
+// let member = prompt("Are you a member? yes/no");
+
+// if (member == "yes" && amount >= 500) {
+//     console.log("Free shipping");
+// } else if (member == "no" && amount >= 1000) {
+//     console.log("Free shipping");
+// } else {
+//     console.log("Shipping charge = ₹100");
+// }
+
+
+// // 11. Triangle type
+
+// let side1 = Number(prompt(" Enter side 1"));
+// let side2 = Number(prompt("Enter side 2"));
+// let side3 = Number(prompt("Enter side 3"));
+
+// if (side1 == side2 && side2 == side3) {
+//     console.log("Equilateral triangle");
+// } else if (side1 == side2 ||
+//            side2 == side3 ||
+//            side1 == side3) {
+//     console.log("Isosceles triangle");
+// } else {
+//     console.log("Scalene triangle");
+// }
+
+
+// // 12. Valid triangle
+
+// let x = Number(prompt(" Enter side 1"));
+// let y = Number(prompt("Enter side 2"));
+// let z = Number(prompt("Enter side 3"));
+
+// if (x + y > z && x + z > y && y + z > x) {
+//     console.log("Valid triangle");
+// } else {
+//     console.log("Invalid triangle");
+// }
+
+
+// // 13. Month name using switch
+
+// let month = Number(prompt(" Enter month number"));
+
+// switch (month) {
+//     case 1:
+//         console.log("January");
+//         break;
+//     case 2:
+//         console.log("February");
+//         break;
+//     case 3:
+//         console.log("March");
+//         break;
+//     case 4:
+//         console.log("April");
+//         break;
+//     case 5:
+//         console.log("May");
+//         break;
+//     case 6:
+//         console.log("June");
+//         break;
+//     case 7:
+//         console.log("July");
+//         break;
+//     case 8:
+//         console.log("August");
+//         break;
+//     case 9:
+//         console.log("September");
+//         break;
+//     case 10:
+//         console.log("October");
+//         break;
+//     case 11:
+//         console.log("November");
+//         break;
+//     case 12:
+//         console.log("December");
+//         break;
+//     default:
+//         console.log("Invalid month");
+// }
+
+
+// // 14. Number of days in month
+
+
+
+// // 15. Simple calculator
+
+// let num1 = Number(prompt(" Enter first number"));
+// let num2 = Number(prompt("Enter second number"));
+// let operator = prompt("Enter operator (+, -, *, /, %)");
+
+// switch (operator) {
+//     case "+":
+//         console.log(num1 + num2);
+//         break;
+
+//     case "-":
+//         console.log(num1 - num2);
+//         break;
+
+//     case "*":
+//         console.log(num1 * num2);
+//         break;
+
+//     case "/":
+//         console.log(num1 / num2);
+//         break;
+
+//     case "%":
+//         console.log(num1 % num2);
+//         break;
+
+//     default:
+//         console.log("Invalid operator");
+// }
+
+
+// // 16. Ticket price based on age
+
+// let age2 = Number(prompt(" Enter age"));
+
+// if (age2 < 13) {
+//     console.log("Child ticket = ₹50");
+// } else if (age2 < 60) {
+//     console.log("Adult ticket = ₹100");
+// } else {
+//     console.log("Senior ticket = ₹60");
+// }
+
+
+// // 17. Product discount
+
+// let purchase = Number(prompt(" Enter purchase amount"));
+// let discount;
+
+// if (purchase >= 5000) {
+//     discount = purchase * 0.20;
+// } else if (purchase >= 2000) {
+//     discount = purchase * 0.10;
+// } else {
+//     discount = purchase * 0.05;
+// }
+
+// console.log("Discount =", discount);
+// console.log("Final amount =", purchase - discount);
+
+
+// // 18. Positive, negative or zero
+
+// let number = Number(prompt(" Enter a number"));
+
+// if (number > 0) {
+//     console.log("Positive");
+// } else if (number < 0) {
+//     console.log("Negative");
+// } else {
+//     console.log("Zero");
+// }
+
+
+// // 19. Divisible by 3 and 5
+
+// let n = Number(prompt(" Enter a number"));
+
+// if (n % 3 == 0 && n % 5 == 0) {
+//     console.log("Divisible by both 3 and 5");
+// } else if (n % 3 == 0) {
+//     console.log("Divisible only by 3");
+// } else if (n % 5 == 0) {
+//     console.log("Divisible only by 5");
+// } else {
+//     console.log("Not divisible by 3 or 5");
+// }
+
+
+
+// // 20. Season based on month
+
+// // 21. Login validation
+
+// let username = prompt(" Enter username");
+// let loginPassword = prompt("Enter password");
+
+// if (username == "admin" && loginPassword == "1234") {
+//     console.log("Login successful");
+// } else {
+//     console.log("Invalid username or password");
+// }
+
+
+// // 22. Greeting based on hour
+
+// let hour = new Date().getHours();
+
+// if (hour >= 5 && hour < 12) {
+//     console.log("Good Morning");
+// } else if (hour >= 12 && hour < 17) {
+//     console.log("Good Afternoon");
+// } else if (hour >= 17 && hour < 21) {
+//     console.log("Good Evening");
+// } else {
+//     console.log("Good Night");
+// }
+
+
+// // 23. Student pass / supplementary
+
+// let sub1 = Number(prompt(" Enter subject 1 mark"));
+// let sub2 = Number(prompt("Enter subject 2 mark"));
+// let sub3 = Number(prompt("Enter subject 3 mark"));
+
+// if (sub1 >= 40 && sub2 >= 40 && sub3 >= 40) {
+//     console.log("Passed all subjects");
+// } else {
+//     console.log("Supplementary exam");
+// }
+
+
+// // 24. Loan eligibility
+
+// let loanAge = Number(prompt(" Enter age"));
+// let loanSalary = Number(prompt("Enter salary"));
+// let creditScore = Number(prompt("Enter credit score"));
+
+// if (loanAge >= 21 &&
+//     loanAge <= 60 &&
+//     loanSalary >= 25000 &&
+//     creditScore >= 700) {
+//     console.log("Loan eligible");
+// } else {
+//     console.log("Loan not eligible");
+// }
+
+
+// // 25. Highest salary among four
+
+// let s1 = Number(prompt(" Employee 1 salary"));
+// let s2 = Number(prompt("Employee 2 salary"));
+// let s3 = Number(prompt("Employee 3 salary"));
+// let s4 = Number(prompt("Employee 4 salary"));
+
+// if (s1 >= s2 && s1 >= s3 && s1 >= s4) {
+//     console.log(s1, "is highest salary");
+// } else if (s2 >= s1 && s2 >= s3 && s2 >= s4) {
+//     console.log(s2, "is highest salary");
+// } else if (s3 >= s1 && s3 >= s2 && s3 >= s4) {
+//     console.log(s3, "is highest salary");
+// } else {
+//     console.log(s4, "is highest salary");
+// }
+
+
+// // 26. Free delivery
+
+// let cart = Number(prompt(" Enter cart value"));
+// let isMember = prompt("Are you a member? yes/no");
+
+// if ((isMember == "yes" && cart >= 500) ||
+//     (isMember == "no" && cart >= 1000)) {
+//     console.log("Free delivery");
+// } else {
+//     console.log("Delivery charge applies");
+// }
+
+
+// // 27. Fare based on distance
+
+// let distance = Number(prompt(" Enter travel distance"));
+
+// if (distance <= 10) {
+//     console.log("Fare = ₹50");
+// } else if (distance <= 30) {
+//     console.log("Fare = ₹100");
+// } else {
+//     console.log("Fare = ₹200");
+// }
+
+
+// // 28. Employee performance
+
+// let score = Number(prompt(" Enter employee score"));
+
+// if (score >= 90) {
+//     console.log("Excellent");
+// } else if (score >= 75) {
+//     console.log("Very Good");
+// } else if (score >= 60) {
+//     console.log("Good");
+// } else if (score >= 40) {
+//     console.log("Average");
+// } else {
+//     console.log("Poor");
+// }
+
+
+// // 29. Company email
+
+// let email = prompt(" Enter email");
+
+// if (email.endsWith("@company.com")) {
+//     console.log("Company email");
+// } else {
+//     console.log("Not a company email");
+// }
+
+
+// // 30. Blood donation eligibility
+
+// let donorAge = Number(prompt(" Enter age"));
+// let weight = Number(prompt("Enter weight"));
+
+// if (donorAge >= 18 &&
+//     donorAge <= 65 &&
+//     weight >= 50) {
+//     console.log("Eligible to donate blood");
+// } else {
+//     console.log("Not eligible to donate blood");
+// }
+
+
+// // 31. BMI classification
+
+// let weight2 = Number(prompt(" Enter weight in kg"));
+// let height = Number(prompt("Enter height in meters"));
+
+// let bmi = weight2 / (height * height);
+
+// console.log("BMI =", bmi);
+
+// if (bmi < 18.5) {
+//     console.log("Underweight");
+// } else if (bmi < 25) {
+//     console.log("Normal");
+// } else if (bmi < 30) {
+//     console.log("Overweight");
+// } else {
+//     console.log("Obese");
+// }
+
+
+// // 32. ATM withdrawal
+
+// let balance = Number(prompt(" Enter account balance"));
+// let withdrawal = Number(prompt("Enter withdrawal amount"));
+// let dailyLimit = 20000;
+
+// if (withdrawal <= balance &&
+//     withdrawal <= dailyLimit) {
+
+//     console.log("Withdrawal successful");
+//     console.log("Remaining balance =", balance - withdrawal);
+
+// } else if (withdrawal > balance) {
+
+//     console.log("Insufficient balance");
+
+// } else {
+
+//     console.log("Daily withdrawal limit exceeded");
+// }
+
+
+// // 33. Cricket match result
+
+// let team1 = Number(prompt(" Enter Team 1 score"));
+// let team2 = Number(prompt("Enter Team 2 score"));
+
+// if (team1 > team2) {
+//     console.log("Team 1 won");
+// } else if (team2 > team1) {
+//     console.log("Team 2 won");
+// } else {
+//     console.log("Match tied");
+// }
+
+
+// // 34. Parking charges
+
+// let parkingHours = Number(prompt(" Enter parking hours"));
+
+// if (parkingHours <= 2) {
+//     console.log("Parking charge = ₹50");
+// } else if (parkingHours <= 5) {
+//     console.log("Parking charge = ₹100");
+// } else {
+//     console.log("Parking charge = ₹200");
+// }
+
+
+
+// // 35. Product stock
+
+// let stock = Number(prompt(" Enter stock quantity"));
+
+// if (stock == 0) {
+//     console.log("Out of stock");
+// } else if (stock <= 10) {
+//     console.log("Low stock");
+// } else {
+//     console.log("In stock");
+// }
+
+
+// // 36. Scholarship eligibility
+
+// let scholarshipMarks = Number(prompt(" Enter marks"));
+// let familyIncome = Number(prompt("Enter family income"));
+
+// if (scholarshipMarks >= 80 &&
+//     familyIncome <= 300000) {
+//     console.log("Eligible for scholarship");
+// } else {
+//     console.log("Not eligible for scholarship");
+// }
+
+
+// // 37. Coupon validation
+
+// // 38. Movie ticket
+
+// let viewerAge = Number(prompt(" Enter age"));
+
+// if (viewerAge < 13) {
+//     console.log("Child ticket");
+// } else if (viewerAge < 60) {
+//     console.log("Adult ticket");
+// } else {
+//     console.log("Senior ticket");
+// }
+
+
+// // 39. Weekday or Weekend
+
+// let day = prompt(" Enter day name");
+
+// if (day == "Saturday" || day == "Sunday") {
+//     console.log("Weekend");
+// } else {
+//     console.log("Weekday");
+// }
+
+
+// // 40. Cashback eligibility
+
+// let cashAmount = Number(prompt(" Enter purchase amount"));
+// let payment = prompt("Enter payment method");
+
+// if (cashAmount >= 1000 && payment == "UPI") {
+//     console.log("Eligible for cashback");
+// } else {
+//     console.log("Not eligible for cashback");
+// }
+
+    </script>
+</body>
+</html>

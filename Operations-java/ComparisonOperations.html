@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparison Operations</title>
+</head>
+<body>
+    <style>
+        body{
+            padding: 20px;
+            justify-content:left; 
+            gap:20px;
+        }
+        input{
+            width: 260px;
+            padding: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 5px;
+            color:black;
+            border: 1px solid black;
+        }
+        button{
+            width:auto;
+            height:fit-content;
+            padding: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            background-color: #d1d4d1;
+            color: blue;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+    <input type="number" id="num1" placeholder="Enter your age">
+    <button onclick="checkAge()">Check Age</button><br><br><hr>
+    <script>
+        function checkAge() {
+    let age = parseInt(document.getElementById('num1').value);
+    
+    if (age >= 18) {
+        alert("You are eligible to vote! 🗳️");
+    } else {
+        alert("Sorry, you are not eligible to vote.");
+    }
+}
+    </script>
+
+    <br><input type="number" id="numb1" placeholder="enter first number">
+    <input type="number" id="numb2" placeholder="enter second number">
+    <button onclick="compareNumbers()">Compare</button><br><br><hr>
+
+    <script>
+        function compareNumbers() {
+    let number1 = parseInt(document.getElementById('numb1').value);
+    let number2 = parseInt(document.getElementById('numb2').value);
+
+    if (number1 > number2) {
+        alert("The first number is greater!");
+    } else if (number2 > number1) {
+        alert("The second number is greater!");
+    } else {
+        alert("Both numbers are equal!");
+    }
+}
+    </script>
+
+    <input type="password" id="pass1" placeholder="Enter password">
+    <input type="password" id="pass2" placeholder="Re-enter password">
+    <button onclick="comparePasswords()">Check Password</button>
+    <br><br><hr>
+
+    <script>
+        function comparePasswords() {
+            let password1 = document.getElementById('pass1').value;
+            let password2 = document.getElementById('pass2').value;
+
+            if (password1 === password2) {
+                alert("Passwords match! ✅");
+            } else {
+                alert("Passwords do not match! ❌");
+            }
+        }
+    </script>
+
+    <input type="number" id="mark" placeholder="Enter your mark">
+    <button onclick="checkMark()">Check Mark</button><br><br><hr>
+     <script>
+        function checkMark() {
+            let mark = parseInt(document.getElementById('mark').value);
+
+            if (mark >= 40) {
+                alert("You have passed! ");
+            } else {
+                alert("Sorry, you have failed.");
+            }
+        }
+    </script>
+
+    <br><input type="number" id="age1" placeholder="enter age of first person">
+    <input type="number" id="age2" placeholder="enter age of second person">
+    <button onclick="compareAges()">Compare Ages</button><br><br><hr>
+
+    <script>
+        function compareAges() {
+    let age1 = parseInt(document.getElementById('age1').value);
+    let age2 = parseInt(document.getElementById('age2').value);
+
+    if (age1 > age2) {
+        alert("The first age is greater!");
+    } else if (age2 > age1) {
+        alert("The second age is greater!");
+    } else {
+        alert("Both ages are equal!");
+    }
+}
+    </script>
+
+
+    <script>
+        let stock = 44;
+
+    if (stock < 10) {
+        console.log("⚠️ Low stock! Only " + stock + " items left.");
+    } else {
+        console.log("✅ Stock is sufficient.");
+    }
+    let message = stock < 10 ? "Low stock!" : "Sufficient stock";
+        console.log(message);
+
+    let num1 = "100";  
+    let num2 = 100;   
+
+    console.log('"100" == 100 :', num1 == num2);  
+
+    console.log('"100" === 100 :', num1 === num2); 
+
+    console.log("Type of '100':", typeof num1); 
+    console.log("Type of 100:", typeof num2); 
+    </script>
+
+    <input type="email" id="email1" placeholder="Enter email 1">
+    <input type="email" id="email2" placeholder="Enter email 2">
+    <button onclick="compareEmails()">Compare Emails</button>
+
+    <script>
+
+        function compareEmails() {
+            let email1 = document.getElementById('email1').value;
+            let email2 = document.getElementById('email2').value;
+            
+            if (email1 !== email2) {
+                alert("✅ Emails are different!");
+            } else {
+                alert("❌ Emails are the same!");
+            }
+        }
+
+</script>
+
+        <!-- <script>
+            let temp = parseFloat(prompt("Enter today's temperature in °C:"));
+
+                if (temp > 35) {
+                    console.log("It's hot today! Temperature is above 35°C.");
+                } else {
+                    console.log("Temperature is 35°C or below.");
+                } 
+        </script> -->
+
+        <script>
+            let n = Number(prompt("ENter the number to check"))
+
+            if (n>=50 && n<=100){
+                console.log("Number is in between 50 and 100")
+            }else{
+                console.log("Enter a number between 50 and 100")
+            }
+            
+        </script>
+</body>
+</html>

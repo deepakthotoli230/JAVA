@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Work Arithemeticoperations</title>
+</head>
+<body>
+    <style>
+        body{
+            display:flex;
+            justify-content:center; 
+            gap:20px;
+        }
+        h2{
+            font-size:30px;
+            font-family:Arial, Helvetica, sans-serif;
+            color:rgb(252, 5, 26);
+        }
+        button {
+            padding: 30px;
+            font-size: 16px;
+            font-weight: bold;
+            background-color: #d1d4d1;
+            color: blue;
+            border-radius: 15px;
+            cursor: pointer;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+        }
+        p{
+            font-size:25px;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            color:rgb(252, 5, 157);
+        }
+    </style>
+    <script>
+
+        //Arithemetic operators
+
+        let book=45;
+        console.log("price of 5 books=" + (5*book));
+
+        let sub = [30, 40, 50, 60, 70, 29];
+        let average = (sub[0] + sub[1] + sub[2] + sub[3] + sub[4] + sub[5]) / 6;
+        console.log("average of 6 subjects = " + average);
+        
+        let a = 2, b = 5;
+        [a, b] = [b, a];
+        console.log("swapped values: " + a + ", " + b);
+        
+        let length=10, width=5;
+        let area=length*width;
+        let perimeter=area*2;
+        console.log("perimeter of rectangle = " + perimeter);
+        console.log("area of rectangle = " + area);
+
+        let num=50;
+        let square=num*num;
+        let cube=num*num*num;
+        console.log("square of " + num + " = " + square);
+        console.log("cube of " + num + " = " + cube);
+
+        let minute=125;
+        let hours=Math.floor(minute/60);
+        let Minutes=minute%60;
+        console.log(hours + " hours and " + Minutes + " minutes");
+        
+        let numb=1552;
+        let lastdigit=numb%10;
+        console.log("last digit is:" + lastdigit);
+
+        let number=50;
+        let reverse=0;
+        while(number>0){
+            let digit=number%10;
+            reverse=(reverse*10)+digit;
+            number=Math.floor(number/10);
+        }
+        console.log("reverse of the number is: " + reverse);
+
+        let count = 0;
+        function incrementCounter() {
+            count++;
+            document.querySelector('button').textContent = 'Click me - ' + count;
+        }
+
+    </script>
+
+        <h2>Visitor count:</h2><button onclick="incrementCounter()">Click me - 0</button>
+    
+</body>
+</html>
