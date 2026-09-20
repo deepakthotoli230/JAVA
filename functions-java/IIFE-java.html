@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IIFE</title>
+</head>
+<body>
+    // IIFE (Immeditatly invoced Function Expression)
+<script>
+    (function(){
+    console.log("Hello world")
+    })();
+
+    (function(name){
+        console.log(`Hello ${name}` )
+    })(`Deepak`);
+
+//Recursive Function
+
+    function factorial(n){
+        if (n===1) {
+            return 1;
+        }
+        return n * factorial(n - 1)
+    }
+
+    console.log(factorial(5));
+
+//Closure
+
+function outer(){
+    let count=0;
+
+    function inner(){
+        count++;
+        console.log(count);
+    }
+    return inner;
+}
+
+let counter = outer ();
+
+counter();
+counter();
+counter();
+counter();
+
+//String - Set of charetcter used to represent letters enclossed in single or double quotes
+
+let name = "Hello Gudmorning"
+// console.log(name[4]);
+// console.log(name.length);
+// for(let i=0;i<=name.length-1;i++){
+//     console.log(name[i])
+// }
+ 
+console.log(name.charAt(4)); //To know the charecter at the 3rd index position
+console.log(name.toUpperCase()) //To change the word to uppercase
+console.log(name.toLowerCase()) //To change into lowercase
+console.log(name.length) //To know the length of the string
+name=name.trim()
+console.log(name.length) //To trim the string
+console.log(name.startsWith('Hello')) //To check the starting string name is true or false
+console.log(name.endsWith('morning')) //To check the ending string name is true or false
+console.log(name.indexOf('g')) //To check the index number of the given string
+console.log(name.slice(0,7)) //To cut the words after the numbers given in the brackets
+console.log(name.replace("Gudmorng", "Good Morning")) //To replace a string
+console.log(name.replaceAll("Hello", "Hey")) //To replace all the words
+let fruits= "Apple , Orange , Pappaya"
+let frts= fruits.split('a') //To split from the word which is given in the quotes
+console.log(frts)
+frts1 = ", Banana"
+console.log(fruits.concat(frts1)) //concat-To add a new word or sentence to the current string
+console.log(fruits+frts1)
+
+let str= "aeroplane"
+let count= 0
+
+for (let i = 0; i<str.length; i++){
+    let char=str[i]
+    if(char == 'a' || char == 'e' || char == 'i' || char == 'o' || char == 'u'){
+        count++;
+    }
+}
+console.log(count)
+</script>
+</body>
+</html>
+
