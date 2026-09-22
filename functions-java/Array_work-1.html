@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARRAY WORK - 1</title>
+</head>
+<body>
+
+<script>
+
+let students = [];
+
+
+function addStudent() {
+
+    let id = Number(prompt("Enter student id"));
+    let name = prompt("Enter student name");
+    let age = Number(prompt("Enter the age"));
+    let course = prompt("Enter the course");
+
+    let student = {
+        id: id,
+        name: name,
+        age: age,
+        course: course
+    };
+
+    students.push(student);
+
+    console.log("Student details added successfully....");
+}
+
+
+function getStudents() {
+
+    if (students.length === 0) {
+        console.log("No students found in the array");
+        return;
+    }
+
+    console.log("-- Students Details --");
+
+    for (let i = 0; i < students.length; i++) {
+
+        console.log(
+            "ID: " + students[i].id +
+            ", Name: " + students[i].name +
+            ", Age: " + students[i].age +
+            ", Course: " + students[i].course
+        );
+    }
+}
+
+
+function updateStudent() {
+
+    let id = Number(prompt("Enter student id to update the details"));
+    let found = false;
+
+    for (let i = 0; i < students.length; i++) {
+
+        if (students[i].id === id) {
+
+            let name = prompt("Enter new name:");
+            let age = Number(prompt("Enter new age:"));
+            let course = prompt("Enter new course:");
+
+            students[i].name = name;
+            students[i].age = age;
+            students[i].course = course;
+
+            console.log("Student data updated successfully");
+
+            found = true;
+            break;
+        }
+    }
+
+    if (!found) {
+        console.log("Student ID not found");
+    }
+}
+
+
+function deleteStudent() {
+
+    let id = Number(prompt("Enter the id to delete"));
+    let found = false;
+
+    for (let i = 0; i < students.length; i++) {
+
+        if (students[i].id === id) {
+
+            students.splice(i, 1);
+
+            console.log("Student deleted successfully");
+
+            found = true;
+            break;
+        }
+    }
+
+    if (!found) {
+        console.log("Student ID not found..!");
+    }
+}
+
+
+let choice;
+
+do {
+
+    choice = Number(prompt(
+        "1. Add Student\n" +
+        "2. View Students\n" +
+        "3. Update Student\n" +
+        "4. Delete Student\n" +
+        "5. Exit\n\n" +
+        "Enter your choice:"
+    ));
+
+    switch (choice) {
+
+        case 1:
+            addStudent();
+            break;
+
+        case 2:
+            getStudents();
+            break;
+
+        case 3:
+            updateStudent();
+            break;
+
+        case 4:
+            deleteStudent();
+            break;
+
+        case 5:
+            console.log("Program exited.");
+            break;
+
+        default:
+            console.log("Invalid choice! Please try again.");
+    }
+
+} while (choice !== 5);
+
+</script>
+
+</body>
+</html>
