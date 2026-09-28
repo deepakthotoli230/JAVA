@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OBJECTS WORK 1</title>
+</head>
+<body>
+    <script>
+        let students = {};
+
+        // Add student
+        function addStudent() {
+            let reg_no = Number(prompt("Enter register number:"));
+            let name = prompt("Enter name of student:");
+            let clas = prompt("Enter the class:");
+
+            students[reg_no] = {
+                name: name,
+                clas: clas
+            };
+
+            // Display newly added student as a table row
+            console.log("Student details added successfully:");
+            console.table({ [reg_no]: students[reg_no] });
+        }
+
+        // Get students
+        function getStudents() {
+            let studentIds = Object.keys(students);
+
+            if (studentIds.length === 0) {
+                console.log("No students found in records.");
+                return;
+            }
+
+            console.log("-- All Students Details --");
+            console.table(students);
+        }
+
+        // Update student
+        function updateStudent() {
+            let id = Number(prompt("Enter student register number to update:"));
+
+            if (students[id]) {
+                let name = prompt("Enter new name:");
+                let clas = prompt("Enter new class:");
+
+                students[id].name = name;
+                students[id].clas = clas;
+
+                console.log("Updated record for Register Number: " + id);
+                console.table({ [id]: students[id] });
+            } else {
+                console.log("Student ID not found!");
+            }
+        }
+
+        // Delete student
+        function deleteStudent() {
+            let id = Number(prompt("Enter the register number to delete:"));
+
+            if (students[id]) {
+                delete students[id];
+                console.log("Student ID " + id + " deleted");
+                
+                console.log("-- Updated Student List --");
+                console.table(students);
+            } else {
+                console.log("ID not found!");
+            }
+        }
+
+        let choice;
+
+        do {
+            choice = Number(prompt(
+                "1. Add Student\n" +
+                "2. View Students\n" +
+                "3. Update Student\n" +
+                "4. Delete Student\n" +
+                "5. Exit\n\n" +
+                "Enter your choice:"
+            ));
+
+            switch (choice) {
+                case 1:
+                    addStudent();
+                    break;
+                case 2:
+                    getStudents();
+                    break;
+                case 3:
+                    updateStudent();
+                    break;
+                case 4:
+                    deleteStudent();
+                    break;
+                case 5:
+                    console.log("Program exited.");
+                    break;
+                default:
+                    console.log("Invalid choice!");
+            }
+
+        } while (choice !== 5);
+    </script>
+</body>
+</html>

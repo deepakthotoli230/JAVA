@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARRAY ITERATION WORK</title>
+</head>
+<body>
+    <script>
+        let numbers1 = [12, 7, 25, 18, 30, 41, 50];
+
+        numbers1.forEach(function(elements){
+            if (elements % 2 == 0){
+                console.log(elements);
+            }
+        });
+
+        let names = ["Rahul", "Anu", "Vishnu", "Meera", "Arjun"];
+        names.map(element => {
+            console.log (element.length)
+        });
+
+        let words = ["apple", "banana", "cat", "elephant", "dog", "computer"];
+        let strlength = words.filter(element => element.length > 5);
+        console.log (strlength);
+
+        let numbers2 = [10, 15, 20, 30, 45, 50, 60, 72];
+        let divisble = numbers2.filter(element=> element%3==0 && element%5==0)
+        console.log(divisible)
+    </script>
+</body>
+</html>

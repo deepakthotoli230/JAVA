@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //LOCAL STORAGE
+        // - storage space provioded by the browser to store the k]datas in the type of keyvalue pairs
+        // - capacity:5mb to 10mb
+        // - life span - the time when we delete data
+
+        //setting or inputting data
+        localStorage.setItem("username" , "Deepak");
+        localStorage.setItem("id" , 225)
+        localStorage.setItem("class" , "CT")
+        const user = localStorage.getItem("username");
+        console.log(user)
+
+        
+
+        //delete the current data
+        // sessionStorage.removeItem("username");
+
+        //remove all data
+        // localStorage.clear();
+
+        //SESSION STORAGE
+        // - temporary storage for a session on the browser 
+        // - only have the lifespan while the uiser stops the current running task 
+        // - 10mb to 20mb storage space
+        // sessionStorage.setItem("tempData" , "Hello");
+        // const data = sessionStorage.getItem("tempData");
+        // console.log(data);
+        // //remove data:
+        // sessionStorage.removeItem("tempData");
+        // //clear all
+        // sessionStorage.clear()
+    </script>
+</body>
+</html>
