@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red{
+            background-color: blue;
+        }
+        .big{
+            font-size: 36px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="heading">JAVA SCRIPT PAGE</h1>
+    <!-- <p id="message">Hey...!,Welcome</p> -->
+     <button onclick="addClass()">Add</button>
+     <button onclick="removeClass()">Remove</button>
+     <button onclick="toggleClass()">Toggle</button>
+    <button id="btn">CLICK ME</button>
+
+
+    <script>
+        // let head = document.createElement("h2");
+        // head.innerText = "Html Tag using Javascript"
+        // document.body.appendChild(head)
+
+        // let para = document.createElement("p");
+        // para.innerText = "Welcome to this page"
+        // document.body.appendChild(para)
+
+        // let btn = document.createElement("button");
+        // btn.innerText = "Click ME"
+        // document.body.appendChild(btn)
+
+        //adding classes
+
+        // let msg = document.getElementById("message");
+        // console.log(msg);
+        // // msg.classList.add("red");
+        // // msg.classList.add("big");
+        // msg.classList.add("red" , "big");
+
+        // //removing the added class
+
+        // msg.classList.remove("red");
+
+        // //toggle classes
+
+        // msg.classList.toggle("red");
+        // msg.classList.toggle("big");
+
+
+        let head = document.getElementById("heading");
+        
+        function addClass(){
+            head.classList.add("red" , "big")
+        }
+        function removeClass(){
+            head.classList.remove("big");
+        }
+        function toggleClass(){
+            head.classList.toggle("red")
+        }
+
+        //event calling 
+        let button = document.getElementById("btn")
+
+        // button.onclick = function(){
+        //     alert("The Button is clicked")
+        // }
+        
+        //event properties with named functon
+
+        // function showMeassage(){
+        //     alert("The button is clicked");
+        // }
+
+        // button.onclick = showMeassage;
+
+        // button.addEventListener("click" , function(){
+        //     alert("Button Clicked")
+        // });
+
+        // function showMessage(){
+        //     alert("button clicked");
+        // }
+
+        // button.addEventListener("click" , showMessage)
+
+        // button.onclick = function(){
+        //     console.log("first");
+            
+        // }
+
+        // button.onclick = function(){
+        //     console.log("Second")
+        // }
+
+        // button.onclick = function(){
+        //     console.log("Third")
+        // }
+
+
+        // button.addEventListener("click",function(){
+        //     console.log("first");
+        // });
+
+        // button.addEventListener("click",function(){
+        //     console.log("second")
+        // });
+
+        // button.addEventListener("click",function(){
+        //     console.log("third")
+        // });
+
+
+        //more events - mouseover , mousedown , keydown ,keyup ,input , change
+
+
+        // button.addEventListener("mouseover" , function(){
+        //     console.log("helo")
+        // });
+
+        // button.addEventListener("mousedown" , function(){
+        //     console.log("none")
+        // });
+
+        // button.addEventListener("keydown" , function(){
+        //     console.log("hyy")
+        // })
+
+        // 1/10/26 --- EventListener
+
+        // button.addEventListener("click" , function(event){
+        //     console.log(event)
+        // })
+
+        button.addEventListener("click" , function(event){
+            console.log(event.target)
+        })
+
+    </script>
+</body>
+</html>
